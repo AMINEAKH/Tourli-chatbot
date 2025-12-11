@@ -3,7 +3,7 @@
 An intelligent chatbot system that answers travel-related questions about Morocco, integrated with a modern web interface and Flask API backend.
 
 **Version:** 1.0.0  
-**Author:** Amine  
+**Author:** Amine Akh  
 **License:** MIT
 
 ---
@@ -108,7 +108,7 @@ The system can answer questions about:
 ### 1. Clone the Repository
 ```bash
 git clone <repository-url>
-cd "final progect"
+cd "TOURLI CHATBOT"
 ```
 
 ### 2. Install Python Dependencies
@@ -620,12 +620,12 @@ curl "https://api.openweathermap.org/data/2.5/weather?q=marrakech&appid=YOUR_KEY
 ## 📝 Dataset Information
 
 ### cleaned_dataset.json
-- **Entries:** ~4000
+- **Entries:** ~10,000+
 - **Categories:** All major tourism categories
 - **Content:** Q&A pairs about Morocco attractions, activities, food, hotels, etc.
 
 ### edge_cases_cleaned.json
-- **Entries:** ~500
+- **Entries:** ~900+
 - **Categories:** Personal greetings, jokes, off-topic questions
 - **Content:** "About yourself", jokes, special cases
 
@@ -644,7 +644,7 @@ This project is licensed under the MIT License - see LICENSE file for details.
 
 ## 👨‍💻 Author
 
-**Amine** - Creator of Tourli, an AI travel companion for exploring Morocco.
+**Amine Akh** - Creator of Tourli, an AI travel companion for exploring Morocco.
 
 ---
 
