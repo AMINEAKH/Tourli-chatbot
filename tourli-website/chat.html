@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourli Chat - AI Travel Assistant</title>
+    <link rel="stylesheet" href="css/chat-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="chat-header">
+        <div class="header-content">
+            <div class="header-left">
+                <a href="index.html" class="back-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back to Home
+                </a>
+                <div class="header-info">
+                    <h1>Tourli Chat</h1>
+                    <p class="status">🟢 Online and ready to help</p>
+                </div>
+            </div>
+            <button class="menu-btn" id="menuBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Chat Container -->
+    <main class="chat-container">
+        <!-- Sidebar -->
+        <aside class="chat-sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Chat History</h2>
+                <button class="close-sidebar-btn" id="closeSidebar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <button class="new-chat-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="12 5 12 19"></polyline>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                New Chat
+            </button>
+
+            <div class="chat-history">
+                <div class="history-item active">
+                    <p>Morocco travel tips</p>
+                    <span class="delete-btn">×</span>
+                </div>
+                <div class="history-item">
+                    <p>Best hotels in Marrakech</p>
+                    <span class="delete-btn">×</span>
+                </div>
+                <div class="history-item">
+                    <p>Fes local cuisine guide</p>
+                    <span class="delete-btn">×</span>
+                </div>
+                <div class="history-item">
+                    <p>Atlas Mountains hiking</p>
+                    <span class="delete-btn">×</span>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <button class="settings-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m3.08 3.08l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m3.08-3.08l4.24-4.24"/>
+                    </svg>
+                    Settings
+                </button>
+            </div>
+        </aside>
+
+        <!-- Chat Messages Area -->
+        <div class="chat-main">
+            <!-- Welcome Section (shown when no messages) -->
+            <div class="chat-welcome" id="welcomeSection">
+                <div class="welcome-content">
+                    <div class="welcome-icon">🌍</div>
+                    <h2>Welcome to Tourli!</h2>
+                    <p>Your AI-powered travel companion for exploring Morocco</p>
+                    
+                    <div class="quick-prompts">
+                        <h3>Quick Start - Try asking:</h3>
+                        <button class="prompt-btn" data-prompt="What are the best places to visit in Marrakech?">
+                            <span class="prompt-emoji">📍</span>
+                            <span>Best places in Marrakech</span>
+                        </button>
+                        <button class="prompt-btn" data-prompt="What's the best time to visit Morocco?">
+                            <span class="prompt-emoji">📅</span>
+                            <span>Best time to visit</span>
+                        </button>
+                        <button class="prompt-btn" data-prompt="How much does it cost to travel in Morocco?">
+                            <span class="prompt-emoji">💰</span>
+                            <span>Travel budget guide</span>
+                        </button>
+                        <button class="prompt-btn" data-prompt="What's the local cuisine like in Morocco?">
+                            <span class="prompt-emoji">🍲</span>
+                            <span>Moroccan cuisine</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Messages Container -->
+            <div class="messages-container" id="messagesContainer">
+                <!-- Messages will be added here dynamically -->
+            </div>
+
+            <!-- Input Area -->
+            <div class="chat-input-area">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="userInput" 
+                        class="chat-input" 
+                        placeholder="Ask me about Morocco, hotels, restaurants, attractions..."
+                        autocomplete="off"
+                    >
+                    
+                    <button class="send-btn" id="sendBtn" title="Send message">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16.6915026,12.4744748 L3.50612381,13.2599618 C3.19218622,13.2599618 3.03521743,13.4170592 3.03521743,13.5741566 L1.15159189,20.0151496 C0.8376543,20.8006365 0.99,21.89 1.77946707,22.52 C2.41,22.99 3.50612381,23.1 4.13399899,22.9429026 L21.714504,14.0454487 C22.6563168,13.5741566 23.1272231,12.6315722 22.9702544,11.6889879 L4.13399899,1.18856946 C3.34915502,0.9314721 2.40734225,1.04788954 1.77946707,1.5191814 C0.994623095,2.13399899 0.837654326,3.0765834 1.15159189,3.86203979 L3.03521743,10.3030328 C3.03521743,10.4601307 3.19218622,10.6172281 3.50612381,10.6172281 L16.6915026,11.4027151 C16.6915026,11.4027151 17.1624089,11.4027151 17.1624089,12.0374903 C17.1624089,12.6722656 16.6915026,12.4744748 16.6915026,12.4744748 Z"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="input-hint">💡 Tip: Ask specific questions for better answers</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Loading Indicator -->
+    <div class="loading-indicator" id="loadingIndicator">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>

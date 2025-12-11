@@ -1,0 +1,48 @@
+{
+  "name": "tourli-landing-website",
+  "version": "1.0.0",
+  "description": "Modern dark theme landing website for Tourli - AI Travel Companion for exploring Morocco",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server",
+    "dev": "npx http-server -p 3000",
+    "build": "echo 'No build step needed - vanilla HTML/CSS/JS'",
+    "test": "echo 'Add your testing framework here'",
+    "lint": "npx stylelint css/*.css && npx eslint js/*.js"
+  },
+  "keywords": [
+    "tourli",
+    "travel",
+    "ai",
+    "chatbot",
+    "morocco",
+    "landing-page",
+    "responsive",
+    "dark-theme",
+    "modern-design"
+  ],
+  "author": "Amine",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/tourli-landing"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "optionalDependencies": {
+    "stylelint": "^15.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead",
+    "not IE 11"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
