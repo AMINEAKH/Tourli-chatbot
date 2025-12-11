@@ -108,7 +108,7 @@ The system can answer questions about:
 ### 1. Clone the Repository
 ```bash
 git clone <repository-url>
-cd "final progect"
+cd "TOURLI CHATBOT"
 ```
 
 ### 2. Install Python Dependencies
